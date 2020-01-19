@@ -21,7 +21,7 @@ npm start
 
 ## Build it
 ```
-npm build
+npm run build
 ```
 
 ### Happy Developing :)
