@@ -5,7 +5,7 @@ let events: {[key: string]: Function} = {
 
 export default class Nui {
 
-    static post(event: string, data = {}, resName = resourceName,) {
+    static post(event: string, data = {}, resName = resourceName) {
 
         return fetch(`http://${resName}/${event}`, {
             method: 'post',
