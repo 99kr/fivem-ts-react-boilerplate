@@ -125,6 +125,9 @@ module.exports = options => ({
             NODE_ENV: 'development',
         }),
     ]),
+    devServer: {
+        historyApiFallback: true
+    },
     resolve: {
         modules: ['src', 'node_modules'],
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.react.js'],
