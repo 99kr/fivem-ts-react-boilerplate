@@ -8,18 +8,15 @@ import rootReducer from "./Reducers";
 import App from './Containers/App/App';
 import { EventListener } from "./Nui"
 
-export const store = createStore(
-    rootReducer,
-    {}
-);
+export const store = createStore(rootReducer, {});
 
 type RootState = ReturnType<typeof rootReducer>;
 export const useSelector: TypedUseSelectorHook<RootState> = useReduxSelector
 
 ReactDOM.render(
     <Provider store={store}>
-        <EventListener/>
         <App/>
+        <EventListener/>
     </Provider>,
     document.getElementById('app'),
 );

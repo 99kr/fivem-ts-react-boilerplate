@@ -1,30 +1,18 @@
-interface IAddMessage {
-    type: string,
-    payload: string
-}
-
-export const Messages = (state: string[] = [], data: IAddMessage) => {
-    switch(data.type) {
-        case "ADD_MESSAGE":
-            return [
-                ...state,
-                data.payload
-            ]
-        default:
-            return state
-    }
-}
-
-interface IToggle {
+interface IShow {
     type: string,
     payload: boolean
 }
 
-export const Toggle = (state = false, data: IToggle) => {
+const Show = (
+    state = process.env.NODE_ENV == "development" ? true: false,
+    data: IShow
+) => {
     switch(data.type) {
-        case "TOGGLE":
+        case "SHOW":
             return data.payload
         default:
             return state
     }
 }
+
+export default Show;
