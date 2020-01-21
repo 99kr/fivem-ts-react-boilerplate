@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { FalseyValue } from 'styled-components';
+import styled from 'styled-components';
 
 import { useSelector } from '../../index';
 import Nui from "../../Nui";
