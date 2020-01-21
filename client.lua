@@ -6,6 +6,7 @@ RegisterCommand("toggle", function()
 end)
 
 Citizen.CreateThread(function()
+    print("aa")
     Citizen.Wait(500)
     SendNUIMessage({
         type = "SEND_RESOURCENAME",
