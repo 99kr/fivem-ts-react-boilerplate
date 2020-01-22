@@ -13,6 +13,11 @@ const Container = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
+    ${process.env.NODE_ENV == "development" && 
+        css`
+            background-image: url("https://cdn.discordapp.com/attachments/655453054522621964/669602739545964564/20190715004102_1.jpg");
+        `
+    }
 `;
 
 const App = () => {
