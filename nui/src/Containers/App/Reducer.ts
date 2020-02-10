@@ -4,7 +4,7 @@ interface IShow {
 }
 
 const Show = (
-    state = process.env.NODE_ENV == "development" ? true: false,
+    state = process.env.NODE_ENV == "development",
     data: IShow
 ) => {
     switch(data.type) {
