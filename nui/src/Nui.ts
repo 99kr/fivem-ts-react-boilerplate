@@ -1,11 +1,8 @@
-let resourceName: string;
-let events: {[key: string]: Function} = {
-    "SEND_RESOURCENAME": (resName: string) => resourceName = resName,
-}
+let events: {[key: string]: Function} = {}
 
 export default class Nui {
 
-    public static post(event: string, data = {}, resName = resourceName) {
+    public static post(event: string, data = {}, resName = GetParentResourceName()) {
         return fetch(`http://${resName}/${event}`, {
             method: 'post',
             headers: {
